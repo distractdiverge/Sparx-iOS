@@ -14,6 +14,8 @@
 		700020D315D1821D004CF70D /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 700020D215D1821D004CF70D /* libiconv.2.dylib */; };
 		7050095E15D171A200266A5C /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 7050095C15D171A200266A5C /* 06-magnify.png */; };
 		7050095F15D171A200266A5C /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 7050095D15D171A200266A5C /* 104-index-cards.png */; };
+		70BF772615D1A40600119452 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70BF772515D1A40600119452 /* icon.png */; };
+		70BF772815D1A42700119452 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70BF772715D1A42700119452 /* icon@2x.png */; };
 		70CE1E9315D1526E001E96BF /* libQREncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1E8D15D15266001E96BF /* libQREncoder.a */; };
 		70CE1E9515D1532B001E96BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1E9415D1532B001E96BF /* QuartzCore.framework */; };
 		70CE1EDC15D158D1001E96BF /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1EDB15D158D1001E96BF /* AddressBookUI.framework */; };
@@ -92,11 +94,13 @@
 		700020D215D1821D004CF70D /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = usr/lib/libiconv.2.dylib; sourceTree = SDKROOT; };
 		7050095C15D171A200266A5C /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "06-magnify.png"; path = "UI/06-magnify.png"; sourceTree = "<group>"; };
 		7050095D15D171A200266A5C /* 104-index-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "104-index-cards.png"; path = "UI/104-index-cards.png"; sourceTree = "<group>"; };
+		70BF772515D1A40600119452 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		70BF772715D1A42700119452 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QREncoder.xcodeproj; path = ../ObjQREncoder/src/QREncoder.xcodeproj; sourceTree = "<group>"; };
 		70CE1E9415D1532B001E96BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		70CE1EDB15D158D1001E96BF /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		70CE1EDD15D158E5001E96BF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		70E0FD8E15D1481E008C69B9 /* SparxPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparxPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E0FD8E15D1481E008C69B9 /* Sparx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sparx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E0FD9215D1481E008C69B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		70E0FD9415D1481E008C69B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		70E0FD9615D1481E008C69B9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,6 +202,8 @@
 		70E0FD8315D1481D008C69B9 = {
 			isa = PBXGroup;
 			children = (
+				70BF772715D1A42700119452 /* icon@2x.png */,
+				70BF772515D1A40600119452 /* icon.png */,
 				700020D215D1821D004CF70D /* libiconv.2.dylib */,
 				70CE1EDD15D158E5001E96BF /* AddressBook.framework */,
 				70CE1EDB15D158D1001E96BF /* AddressBookUI.framework */,
@@ -212,7 +218,7 @@
 		70E0FD8F15D1481E008C69B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70E0FD8E15D1481E008C69B9 /* SparxPrototype.app */,
+				70E0FD8E15D1481E008C69B9 /* Sparx.app */,
 				70E0FDAE15D1481E008C69B9 /* SparxPrototypeTests.octest */,
 			);
 			name = Products;
@@ -284,9 +290,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		70E0FD8D15D1481E008C69B9 /* SparxPrototype */ = {
+		70E0FD8D15D1481E008C69B9 /* Sparx */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70E0FDC115D1481E008C69B9 /* Build configuration list for PBXNativeTarget "SparxPrototype" */;
+			buildConfigurationList = 70E0FDC115D1481E008C69B9 /* Build configuration list for PBXNativeTarget "Sparx" */;
 			buildPhases = (
 				70E0FD8A15D1481E008C69B9 /* Sources */,
 				70E0FD8B15D1481E008C69B9 /* Frameworks */,
@@ -298,9 +304,9 @@
 				700020C115D17DBF004CF70D /* PBXTargetDependency */,
 				70CE1E9215D1526B001E96BF /* PBXTargetDependency */,
 			);
-			name = SparxPrototype;
+			name = Sparx;
 			productName = SparxPrototype;
-			productReference = 70E0FD8E15D1481E008C69B9 /* SparxPrototype.app */;
+			productReference = 70E0FD8E15D1481E008C69B9 /* Sparx.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70E0FDAD15D1481E008C69B9 /* SparxPrototypeTests */ = {
@@ -352,7 +358,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				70E0FD8D15D1481E008C69B9 /* SparxPrototype */,
+				70E0FD8D15D1481E008C69B9 /* Sparx */,
 				70E0FDAD15D1481E008C69B9 /* SparxPrototypeTests */,
 			);
 		};
@@ -391,6 +397,8 @@
 				70E0FDE115D14A03008C69B9 /* FrontController.xib in Resources */,
 				7050095E15D171A200266A5C /* 06-magnify.png in Resources */,
 				7050095F15D171A200266A5C /* 104-index-cards.png in Resources */,
+				70BF772615D1A40600119452 /* icon.png in Resources */,
+				70BF772815D1A42700119452 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +466,7 @@
 		};
 		70E0FDB515D1481E008C69B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70E0FD8D15D1481E008C69B9 /* SparxPrototype */;
+			target = 70E0FD8D15D1481E008C69B9 /* Sparx */;
 			targetProxy = 70E0FDB415D1481E008C69B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,7 +550,7 @@
 				INFOPLIST_FILE = "SparxPrototype/SparxPrototype-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -560,7 +568,7 @@
 				INFOPLIST_FILE = "SparxPrototype/SparxPrototype-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -612,7 +620,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		70E0FDC115D1481E008C69B9 /* Build configuration list for PBXNativeTarget "SparxPrototype" */ = {
+		70E0FDC115D1481E008C69B9 /* Build configuration list for PBXNativeTarget "Sparx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				70E0FDC215D1481E008C69B9 /* Debug */,

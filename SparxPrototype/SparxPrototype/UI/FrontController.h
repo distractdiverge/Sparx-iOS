@@ -19,7 +19,8 @@ static const int kScanViewTag = 2;
     UITabBarDelegate, 
     UIImagePickerControllerDelegate,
     UINavigationControllerDelegate,
-    DecoderDelegate>
+    DecoderDelegate,
+    ABPersonViewControllerDelegate>
 {
     IBOutlet UITabBar* navBar;
     IBOutlet UITabBarItem* generateNavButton;

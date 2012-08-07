@@ -45,6 +45,7 @@ static const CGFloat kPadding = 10;
 
 
 - (void)drawRect:(CGRect)rect inContext:(CGContextRef)context {
+    
   CGContextBeginPath(context);
   CGContextMoveToPoint(context, rect.origin.x, rect.origin.y);
   CGContextAddLineToPoint(context, rect.origin.x + rect.size.width, rect.origin.y);

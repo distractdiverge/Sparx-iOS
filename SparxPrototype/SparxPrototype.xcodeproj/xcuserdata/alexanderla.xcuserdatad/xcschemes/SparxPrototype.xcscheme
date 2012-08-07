@@ -15,7 +15,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "70E0FD8D15D1481E008C69B9"
                BuildableName = "SparxPrototype.app"
-               BlueprintName = "SparxPrototype"
+               BlueprintName = "Sparx"
                ReferencedContainer = "container:SparxPrototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,7 +43,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "70E0FD8D15D1481E008C69B9"
             BuildableName = "SparxPrototype.app"
-            BlueprintName = "SparxPrototype"
+            BlueprintName = "Sparx"
             ReferencedContainer = "container:SparxPrototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,7 +61,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "70E0FD8D15D1481E008C69B9"
             BuildableName = "SparxPrototype.app"
-            BlueprintName = "SparxPrototype"
+            BlueprintName = "Sparx"
             ReferencedContainer = "container:SparxPrototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,7 +79,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "70E0FD8D15D1481E008C69B9"
             BuildableName = "SparxPrototype.app"
-            BlueprintName = "SparxPrototype"
+            BlueprintName = "Sparx"
             ReferencedContainer = "container:SparxPrototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

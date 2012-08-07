@@ -24,9 +24,9 @@ static const NSTimeInterval kTakePictureTimeInterval = 5;
 @implementation FrontController(hidden)
 -(void)updateQRCode:(ABRecordRef)person
 {
-    ABRecordID recordID = ABRecordGetRecordID(person);
-        
-    UIImage* image = [QREncoder encode: [NSString stringWithFormat:@"%@",recordID]];
+    NSString* personName = (__bridge NSString*)ABRecordCopyCompositeName(person);
+    
+    UIImage* image = [QREncoder encode:[NSString stringWithFormat:@"%@",personName] size:2 correctionLevel:QRCorrectionLevelHigh];
     
     [qrView setImage:image];
     [qrView layer].magnificationFilter = kCAFilterNearest;
@@ -85,12 +85,12 @@ static int const kPadding = 5;
         
         [self presentModalViewController:_imagePicker animated:YES];
         
-        _timer = [NSTimer
-                  scheduledTimerWithTimeInterval: kTakePictureTimeInterval
-                  target: self
-                  selector: @selector(takePicture:)
-                  userInfo: nil
-                  repeats: YES];
+        
+        UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:_imagePicker action:@selector(takePicture)];
+        
+        [tapRecognizer setNumberOfTapsRequired:1];
+                
+        [_overlayView addGestureRecognizer:tapRecognizer];
     }
 
 }
@@ -209,14 +209,19 @@ static int const kPadding = 5;
 - (void)decoder:(QRDecoder *)decoder didDecodeImage:(UIImage *)image usingSubset:(UIImage *)subset withResult:(TwoDDecoderResult *)result {
 
     _overlayView.points = result.points;
+    
+    ABAddressBookRef addressBook = ABAddressBookCreate();
 
-    ABRecordID record = (ABRecordID)result.text;
+    NSArray* people = (__bridge NSArray*)ABAddressBookCopyPeopleWithName(addressBook, (__bridge CFStringRef)result.text);
+   
+    ABRecordRef person = (__bridge ABRecordRef)[people objectAtIndex:0];
     
-    ABRecordRef person = ABAddressBookGetPersonWithRecordID(ABAddressBookCreate(), record);
+    NSString* firstName = (__bridge NSString*)ABRecordCopyValue(person, kABPersonFirstNameProperty);
+    NSString* lastName = (__bridge NSString*)ABRecordCopyValue(person, kABPersonLastNameProperty);
     
-    NSString* name = (__bridge_transfer NSString*)ABRecordCopyCompositeName(person);
+    [scanOutput setText:[NSString stringWithFormat:@"FirstName: %@\nLastName: %@\n",firstName,lastName]];
     
-    [scanOutput setText:name];
+    CFRelease(addressBook);
     
 	[self dismissModalViewControllerAnimated:YES];
 }
