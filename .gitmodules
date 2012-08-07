@@ -1,6 +1,6 @@
 [submodule "ObjQREncoder"]
 	path = ObjQREncoder
-	url = git://github.com/jverkoey/ObjQREncoder.git
+	url = git://github.com/alexlapinski/ObjQREncoder.git
 [submodule "liteqr"]
 	path = liteqr
 	url = git://github.com/jverkoey/liteqr.git
