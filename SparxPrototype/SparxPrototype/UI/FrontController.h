@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface FrontController : UIViewController
+@interface FrontController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
+{
+    IBOutlet UIImageView* qrView;
+    IBOutlet UIButton* selectContactButton;
+}
+
+-(IBAction)handleSelectContactButtonPressed:(id)sender;
 
 @end

@@ -7,10 +7,29 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "
-
+#import <QREncoder/QREncoder.h>
+#import <AddressBookUI/AddressBookUI.h>
 
 #import "FrontController.h"
+
+@interface FrontController(hidden)
+-(void)updateQRCode:(ABRecordRef)person;
+@end
+@implementation FrontController(hidden)
+-(void)updateQRCode:(ABRecordRef)person
+{
+    NSString* firstName = (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonFirstNameProperty);
+    
+    NSString* lastName = (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonLastNameProperty);
+    
+    UIImage* image = [QREncoder encode: [NSString stringWithFormat:@"%@-%@",firstName,lastName]];
+    
+    [qrView setImage:image];
+    [qrView layer].magnificationFilter = kCAFilterNearest;
+}
+@end
+
+static int const kPadding = 5;
 
 @implementation FrontController
 
@@ -21,17 +40,35 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-	UIImage* image = [QREncoder encode:@"http://www.google.com/"];
-    
-	UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
-    CGFloat qrSize = self.view.bounds.size.width - kPadding * 2;
-	imageView.frame = CGRectMake(kPadding, (self.view.bounds.size.height - qrSize) / 2,
-                                 qrSize, qrSize);
-	[imageView layer].magnificationFilter = kCAFilterNearest;
-    
-	[self.view addSubview:imageView];
-    [imageView release];
+}
 
+#pragma mark -
+#pragma mark UI Action Handlers
+-(IBAction)handleSelectContactButtonPressed:(id)sender
+{
+    ABPeoplePickerNavigationController* picker = [[ABPeoplePickerNavigationController alloc] init];
+    [picker setPeoplePickerDelegate:self];
+    
+    [self presentModalViewController:picker animated:YES];
+}
+
+#pragma mark -
+#pragma mark ABPeoplePickerDelegate
+-(void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+-(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    [self updateQRCode:person];
+    [self dismissModalViewControllerAnimated:YES];
+    
+    return NO;
+}
+
+-(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
 }
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70CE1E9315D1526E001E96BF /* libQREncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1E8D15D15266001E96BF /* libQREncoder.a */; };
+		70CE1E9515D1532B001E96BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1E9415D1532B001E96BF /* QuartzCore.framework */; };
+		70CE1EDC15D158D1001E96BF /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1EDB15D158D1001E96BF /* AddressBookUI.framework */; };
+		70CE1EDE15D158E5001E96BF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CE1EDD15D158E5001E96BF /* AddressBook.framework */; };
 		70E0FD9315D1481E008C69B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0FD9215D1481E008C69B9 /* UIKit.framework */; };
 		70E0FD9515D1481E008C69B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0FD9415D1481E008C69B9 /* Foundation.framework */; };
 		70E0FD9715D1481E008C69B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0FD9615D1481E008C69B9 /* CoreGraphics.framework */; };
@@ -26,6 +30,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		70CE1E8C15D15266001E96BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = QREncoder;
+		};
+		70CE1E8E15D15266001E96BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB7DA3AE10A4F5D90071984A;
+			remoteInfo = QREncoderTest;
+		};
+		70CE1E9115D1526B001E96BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = QREncoder;
+		};
 		70E0FDB415D1481E008C69B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 70E0FD8515D1481D008C69B9 /* Project object */;
@@ -36,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QREncoder.xcodeproj; path = ../ObjQREncoder/src/QREncoder.xcodeproj; sourceTree = "<group>"; };
+		70CE1E9415D1532B001E96BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		70CE1EDB15D158D1001E96BF /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		70CE1EDD15D158E5001E96BF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		70E0FD8E15D1481E008C69B9 /* SparxPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparxPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E0FD9215D1481E008C69B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		70E0FD9415D1481E008C69B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70CE1EDE15D158E5001E96BF /* AddressBook.framework in Frameworks */,
+				70CE1EDC15D158D1001E96BF /* AddressBookUI.framework in Frameworks */,
+				70CE1E9515D1532B001E96BF /* QuartzCore.framework in Frameworks */,
+				70CE1E9315D1526E001E96BF /* libQREncoder.a in Frameworks */,
 				70E0FD9315D1481E008C69B9 /* UIKit.framework in Frameworks */,
 				70E0FD9515D1481E008C69B9 /* Foundation.framework in Frameworks */,
 				70E0FD9715D1481E008C69B9 /* CoreGraphics.framework in Frameworks */,
@@ -85,9 +118,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70CE1E8515D15265001E96BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70CE1E8D15D15266001E96BF /* libQREncoder.a */,
+				70CE1E8F15D15266001E96BF /* QREncoderTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		70E0FD8315D1481D008C69B9 = {
 			isa = PBXGroup;
 			children = (
+				70CE1EDD15D158E5001E96BF /* AddressBook.framework */,
+				70CE1EDB15D158D1001E96BF /* AddressBookUI.framework */,
+				70CE1E9415D1532B001E96BF /* QuartzCore.framework */,
 				70E0FD9A15D1481E008C69B9 /* SparxPrototype */,
 				70E0FDB615D1481E008C69B9 /* SparxPrototypeTests */,
 				70E0FD9115D1481E008C69B9 /* Frameworks */,
@@ -107,6 +152,7 @@
 		70E0FD9115D1481E008C69B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */,
 				70E0FD9215D1481E008C69B9 /* UIKit.framework */,
 				70E0FD9415D1481E008C69B9 /* Foundation.framework */,
 				70E0FD9615D1481E008C69B9 /* CoreGraphics.framework */,
@@ -174,6 +220,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				70CE1E9215D1526B001E96BF /* PBXTargetDependency */,
 			);
 			name = SparxPrototype;
 			productName = SparxPrototype;
@@ -217,6 +264,12 @@
 			mainGroup = 70E0FD8315D1481D008C69B9;
 			productRefGroup = 70E0FD8F15D1481E008C69B9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 70CE1E8515D15265001E96BF /* Products */;
+					ProjectRef = 70CE1E8415D15265001E96BF /* QREncoder.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				70E0FD8D15D1481E008C69B9 /* SparxPrototype */,
@@ -224,6 +277,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		70CE1E8D15D15266001E96BF /* libQREncoder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQREncoder.a;
+			remoteRef = 70CE1E8C15D15266001E96BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70CE1E8F15D15266001E96BF /* QREncoderTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QREncoderTest.octest;
+			remoteRef = 70CE1E8E15D15266001E96BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		70E0FD8C15D1481E008C69B9 /* Resources */ = {
@@ -284,6 +354,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		70CE1E9215D1526B001E96BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QREncoder;
+			targetProxy = 70CE1E9115D1526B001E96BF /* PBXContainerItemProxy */;
+		};
 		70E0FDB515D1481E008C69B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 70E0FD8D15D1481E008C69B9 /* SparxPrototype */;
